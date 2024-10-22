@@ -8,28 +8,28 @@
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
-#
 
-# Modify default IP
+
+#Modify default IP
 sed -i 's/192.168.1.1/192.168.8.8/g' package/base-files/files/bin/config_generate
 
-# Modify default theme
+#Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
-# Modify hostname
+#Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 
 #替换argon主题
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git feeds/luci/applications/luci-app-argon-config
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 #rm -rf feeds/luci/themes/luci-theme-argon
 #rm -rf feeds/luci/themes/luci-theme-design
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 #git clone https://github.com/gngpp/luci-theme-design.git feeds/luci/themes/luci-theme-design
 #rm -rf feeds/luci/applications/luci-app-argon-config
 #rm -rf feeds/luci/applications/luci-app-design-config
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git feeds/luci/applications/luci-app-argon-config
 #git clone https://github.com/gngpp/luci-app-design-config.git feeds/luci/applications/luci-app-design-config
 
 
